@@ -41,26 +41,21 @@
 
 $route['default_controller'] = 'main/index';
 $route['404_override'] = '';
-
-$route['(:any)/index'] = '$1/index';
-$route['(:any)/new'] = '$1/action_new';
-$route['(:any)/create'] = '$1/action_create';
-$route['(:any)/(:num)/edit'] = '$1/action_edit/$2';
-$route['(:any)/(:num)/update'] = '$1/action_update/$2';
-$route['(:any)/(:num)'] = '$1/action_show/$2';
-$route['(:any)/(:num)/destroy'] = '$1/action_destroy/$2';
+$route['user/index'] = 'user/index';
+//$route['(:any)/index'] = '$1/index';
+$route['(:any)/new'] = '$1/new';
+$route['(:any)/create'] = '$1/create';
+$route['(:any)/(:num)/edit'] = '$1/edit/$2';
+$route['(:any)/(:num)/update'] = '$1/update/$2';
+$route['(:any)/(:num)'] = '$1/show/$2';
+$route['(:any)/(:num)/destroy'] = '$1/destroy/$2';
 
 $route['(:any)/ajax/(:any)/(:num)'] = 'main/action_index';//'$1/ajax_$2';
 
-$route['main/calendar'] = 'main/action_calendar';
+$route['main/calendar'] = 'main/calendar';
 
-$route['user/login'] = 'user/action_login';
-$route['user/fb_login'] = 'user/action_fb_login';
-$route['user/fb_register'] = 'user/action_fb_register';
 
-$route['holder/(:num)/select'] = 'holder/action_select/$1';
-
-$route['(:any)/action_(:any)'] = 'main/action_index';
+//$route['(:any)/action_(:any)'] = 'main/action_index';
 
 
 /* End of file routes.php */
