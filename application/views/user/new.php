@@ -25,17 +25,12 @@
     <p>
         <label for="user_school">所屬學校：</label><br>
         <?php 
-           
-            $options = array( $school[0]['school_id'] => $school[0]['school_name'].$school[0]['dept'],
-                                $school[1]['school_id'] => $school[1]['school_name'].$school[1]['dept'],
-                                $school[2]['school_id'] => $school[2]['school_name'].$school[2]['dept'],
-                                $school[3]['school_id'] => $school[3]['school_name'].$school[3]['dept'],
-                                $school[4]['school_id'] => $school[4]['school_name'].$school[4]['dept'],
-                                $school[5]['school_id'] => $school[5]['school_name'].$school[5]['dept'],
-                                $school[6]['school_id'] => $school[6]['school_name'].$school[6]['dept'],
-                                $school[7]['school_id'] => $school[7]['school_name'].$school[7]['dept'],
-                                $school[8]['school_id'] => $school[8]['school_name'].$school[8]['dept'],
-                                $school[9]['school_id'] => $school[9]['school_name'].$school[9]['dept']);
+            $options = array();
+            for ($i=0; $i < sizeof($school); $i++) { 
+                $temp = array($school[$i]['school_id'] => $school[$i]['school_name'].$school[$i]['dept']);
+                $options += $temp;
+            }
+            
                                 
             echo form_dropdown('user_school', $options, 1 );
          ?>

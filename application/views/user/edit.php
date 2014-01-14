@@ -1,7 +1,7 @@
 <h1>
     edit the User
 </h1>
-
+    
 <?php echo form_open_multipart('user/'.$user['U_id'].'/update', array('id' => 'user_update')); ?>
 <?php 
     function form_input_attr($attr)
@@ -70,7 +70,7 @@
 
     
     <p>
-        <?php echo form_submit(array('class' => 'ff blue'), '建立') ?>
+        <?php echo form_submit(array('class' => 'ff blue'), '更新') ?>
     </p>
 
 <?php echo form_close(); ?>

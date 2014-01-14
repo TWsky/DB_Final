@@ -40,20 +40,24 @@
 
 
 $route['default_controller'] = 'main/index';
-$route['404_override'] = '';
+$route['404_override'] = 'main/fault';
 $route['main/port'] = 'main/window';
 $route['user/login'] = 'user/action_login';
 $route['user/logged'] = 'user/action_logged';
 
 //$route['user/new'] = 'user/action_new';
 //$route['(:any)/index'] = '$1/index';
+$route['(:any)/(:num)/p'] = '$1/p/$2';
 $route['(:any)/new'] = '$1/action_new';
 $route['(:any)/create'] = '$1/action_create';
 $route['(:any)/(:num)/edit'] = '$1/action_edit/$2';
 $route['(:any)/(:num)/update'] = '$1/action_update/$2';
 $route['(:any)/(:num)'] = '$1/action_show/$2';
 $route['(:any)/(:num)/destroy'] = '$1/destroy/$2';
-
+//$route['(:any)/new/(:num)'] = '$1/action_new/$2';
+$route['(:any)/(:num)/add'] = '$1/action_add/$2';
+$route['(:any)/(:num)/make'] = '$1/action_make/$2';
+$route['(:any)/(:num)/select'] = '$1/action_select/$2';
 $route['(:any)/ajax/(:any)/(:num)'] = 'main/action_index';//'$1/ajax_$2';
 
 $route['main/calendar'] = 'main/calendar';

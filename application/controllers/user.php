@@ -79,14 +79,15 @@ class User extends CI_Controller {
     	$data['user_school'] = $this->school_model->user_school_get($id);
     	$data['school'] = $this->school_model->school_name_get($data['user_school']['school_id']);
     	//print_r($data['user']);
-    	//$data['project'] = $this->project_model->get_project($id);
+    	$data['project'] = $this->project_model->get_project($id);
+    	//print_r($data['project']);
     	//$data['exp'] = $this->exp_model->get_exp($id);
     	//$data['skill'] = $this->skill_model->get_skill($id);
 
     	$this->load->view('user/show', $data);
     	$this->load->view('button/edit_btn', $data);
     	//$this->load->view('button/exp_btn');
-    	//$this->load->view('button/pro_btn');
+    	$this->load->view('button/pro_btn',$data);
     	//$this->load->view('button/skill_btn');
     }
     public function action_edit($id)
@@ -122,7 +123,30 @@ class User extends CI_Controller {
         redirect('/user/'.$user_id);
 
     }
+    public function p($id)
+    {
+    	$data['user'] = $this->user_model->get_user($id);
+    	$data['user_school'] = $this->school_model->user_school_get($id);
+    	$data['school'] = $this->school_model->school_name_get($data['user_school']['school_id']);
+    	//print_r($data['user']);
+    	$data['project'] = $this->project_model->get_project($id);
+    	//print_r($data['project']);
+    	//$data['exp'] = $this->exp_model->get_exp($id);
+    	//$data['skill'] = $this->skill_model->get_skill($id);
 
+    	$this->load->view('user/show', $data);
+    	$this->load->view('button/new_pro', $data);
+    	$this->load->view('button/sel_pro', $data);
+    	
+    }
+    public function exp()
+    {
+    	# code...
+    }
+    public function skill($value='')
+    {
+    	# code...
+    }
 
 }
 ?>
