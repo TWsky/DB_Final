@@ -42,9 +42,10 @@
 $route['default_controller'] = 'main/index';
 $route['404_override'] = '';
 $route['user/index'] = 'user/index';
+//$route['user/new'] = 'user/action_new';
 //$route['(:any)/index'] = '$1/index';
-$route['(:any)/new'] = '$1/new';
-$route['(:any)/create'] = '$1/create';
+$route['(:any)/new'] = '$1/action_new';
+$route['(:any)/create'] = '$1/action_create';
 $route['(:any)/(:num)/edit'] = '$1/edit/$2';
 $route['(:any)/(:num)/update'] = '$1/update/$2';
 $route['(:any)/(:num)'] = '$1/show/$2';
