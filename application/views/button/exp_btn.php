@@ -1,0 +1,1 @@
+<input type="button" value="edit Experience" onclick="self.location.href='<?php echo base_url('/exp/'.$exp['e_id'].'/edit/');?>'"> 

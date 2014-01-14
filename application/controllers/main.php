@@ -29,6 +29,10 @@ class Main extends CI_Controller {
         //$this->load->view('layout/layout', $data);
         $this->load->view('main/index');
     }
+    public function window()
+    {
+        $this->load->view('main/port');
+    }
 }
 
 /* End of file welcome.php */

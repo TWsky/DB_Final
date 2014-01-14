@@ -41,14 +41,17 @@
 
 $route['default_controller'] = 'main/index';
 $route['404_override'] = '';
-$route['user/index'] = 'user/index';
+$route['main/port'] = 'main/window';
+$route['user/login'] = 'user/action_login';
+$route['user/logged'] = 'user/action_logged';
+
 //$route['user/new'] = 'user/action_new';
 //$route['(:any)/index'] = '$1/index';
 $route['(:any)/new'] = '$1/action_new';
 $route['(:any)/create'] = '$1/action_create';
-$route['(:any)/(:num)/edit'] = '$1/edit/$2';
-$route['(:any)/(:num)/update'] = '$1/update/$2';
-$route['(:any)/(:num)'] = '$1/show/$2';
+$route['(:any)/(:num)/edit'] = '$1/action_edit/$2';
+$route['(:any)/(:num)/update'] = '$1/action_update/$2';
+$route['(:any)/(:num)'] = '$1/action_show/$2';
 $route['(:any)/(:num)/destroy'] = '$1/destroy/$2';
 
 $route['(:any)/ajax/(:any)/(:num)'] = 'main/action_index';//'$1/ajax_$2';

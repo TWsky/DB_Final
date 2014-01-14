@@ -1,0 +1,1 @@
+<input type="button" value="edit Project" onclick="self.location.href='<?php echo base_url('/project/'.$project['P_id'].'/edit/');?>'"> 

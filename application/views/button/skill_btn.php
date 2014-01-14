@@ -1,0 +1,1 @@
+<input type="button" value="edit Skill" onclick="self.location.href='<?php echo base_url('/skill/'.$skill['S_id'].'/edit/');?>'"> 
