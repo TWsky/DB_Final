@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class>
-        <div class="span8 offset5">
+        <div class="span6 offset3">
             <div class="hero-unit">
 	<h3>姓名: <?php echo $user['Name']; ?></h3>
     <h3>所屬學校系: <?php echo $school['school_name'].$school['dept']; ?></h3>
