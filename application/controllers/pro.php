@@ -55,7 +55,7 @@ class Pro extends CI_Controller {
         $data['up_update'] = $this->input->post('pro_check');
         print_r($data['up_update']);
         $this->project_model->update_user_pro($data);
-        //redirect('/user/'.$user_id);
+        redirect('/user/'.$user_id);
         
     }
 
